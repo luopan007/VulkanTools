@@ -8,19 +8,19 @@ This project provides various Vulkan tools(这个项目提供多个Vulkan工具)
 | Linux/Android | [![Build Status](https://travis-ci.org/LunarG/VulkanTools.svg?branch=master)](https://travis-ci.org/LunarG/VulkanTools) |
 | Windows | [![Build status](https://ci.appveyor.com/api/projects/status/2ncmy766ufb2hnh2/branch/master?svg=true)](https://ci.appveyor.com/project/karl-lunarg/vulkantools/branch/master) |
 
-## Introduction
+## Introduction 介绍
 
-The following components are available in this repository:
+The following components are available in this repository:本仓的以下组件是可用的：
 - Api_dump, screenshot, device_simulation, and example layers (layersvt/)
 - Starter_layer and demo_layer (layer_factory/)
 
-## Contributing
+## Contributing 贡献
 
 If you intend to contribute, the preferred work flow is for you to develop your contribution
 in a fork of this repo in your GitHub account and then submit a pull request.
 Please see the [CONTRIBUTING](CONTRIBUTING.md) file in this repository for more details
 
-## How to Build and Run
+## How to Build and Run 如何编译和运行
 
 [BUILD.md](BUILD.md)
 includes directions for building all the components, running the tests and running the demo applications.
@@ -28,7 +28,7 @@ includes directions for building all the components, running the tests and runni
 Information on how to enable the various layers is in
 [layersvt/README.md](layersvt/README.md).
 
-## Version Tagging Scheme
+## Version Tagging Scheme 版本标签方案
 
 Updates to the `LunarG-VulkanTools` repository which correspond to a new Vulkan specification release are tagged using the following format: `v<`_`version`_`>` (e.g., `v1.1.96`).
 
@@ -36,12 +36,12 @@ Updates to the `LunarG-VulkanTools` repository which correspond to a new Vulkan 
 
 This scheme was adopted following the 1.1.96 Vulkan specification release.
 
-## License
+## License 版权
 This work is released as open source under a Apache-style license from Khronos including a Khronos copyright.
 
 See COPYRIGHT.txt for a full list of licenses used in this repository.
 
-## Acknowledgements
+## Acknowledgements 鸣谢
 While this project has been developed primarily by LunarG, Inc., there are many other
 companies and individuals making this possible: Valve Corporation, funding
 project development;
