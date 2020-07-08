@@ -10,7 +10,7 @@ Copyright &copy; 2015-2020 LunarG, Inc.
 
 # Vulkan Layer Factory
 
-## Overview 总览
+## Overview ：总览
 
 The Vulkan Layer Factory is a framework based on the canonical Vulkan layer model that
 facilitates the implementation of Vulkan Layers. The layer factory hides the majority of the
@@ -32,7 +32,7 @@ The Vulkan Layer Factory framework produces 'Factory Layers' comprising one or m
 or after (PostCallApiName) each Vulkan entrypoint of interest. Each interceptor is independent
 of all others within a Factory Layer, and their call order is not guaranteed.
 
-### Layer Factory sample code 示例代码
+### Layer Factory sample code ：示例代码
 
 The base installation of the layer factory contains some sample layers, including
 the Demo layer and the Starter Layer. The Starter Layer in particular is meant to serve as
@@ -41,7 +41,7 @@ an example of a very simple layer implementation.
 该项目包含两个示例，Demo和Starter。
 
 
-### Create a Factory Layer 创建Layer
+### Create a Factory Layer ：创建Layer
 
 
 Step 1: 在目录layer_factory创建一个子文件夹，取名luopan
@@ -67,17 +67,16 @@ Step 4: 执行cmake命令，编译.
     vkGetInstanceProcAddr
     vkGetDeviceProcAddr
 
-## Using Layers 使用Layers
+## Using Layers ：使用Layers
 
-1. Build VK loader using normal steps (cmake and make)
-2. Place the layer library (dll or so) in the same directory as your VK test or application
+1. 编译VK加载器
+2. 设置VK_LAYER_PATH指定Layer的目录
 
-       This is required for the Loader to be able to scan and enumerate your library.
-       Alternatively, use the `VK_LAYER_PATH` environment variable to specify where the layer libraries reside.
+    'set VK_LAYER_PATH=my_layer_path'
 
-3. Specify which layers to activate using environment variables.
+3. 使用环境变量激活层.
 
-    `export VK\_INSTANCE\_LAYERS=VK\_LAYER\_KHRONOS\_validation:VK\_LAYER\_LUNARG\_starter\_layer`
+    `export VK_INSTANCE_LAYERS=VK_LAYER_KHRONOS_validation:VK_LAYER_LUNARG_luopan`
 
 
 ### Layer Factory Features
