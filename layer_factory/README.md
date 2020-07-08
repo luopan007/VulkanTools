@@ -72,7 +72,7 @@ Step 4: 执行cmake命令，编译.
 1. 编译VK加载器
 2. 设置VK_LAYER_PATH指定Layer的目录
 
-    'set VK_LAYER_PATH=my_layer_path'
+    `set VK_LAYER_PATH=my_layer_path`
 
 3. 使用环境变量激活层.
 
