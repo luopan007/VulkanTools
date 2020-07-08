@@ -17,9 +17,15 @@ facilitates the implementation of Vulkan Layers. The layer factory hides the maj
 loader-layer interface, layer boilerplate, setup and initialization, and complexities
 of layer development.
 
+翻译：
+Vulkan Layer Factory是一个基于标准Vulkan Layer Model的框架，用来促进Vulkan Layer的开发，它隐藏了开发Vulkan Layer所需要的复杂工作，比如：加载器接口、设置、初始化等等。
+
 A complete layer with the attendant support files can be produced by simply creating a
 subdirectory in the layer\_factory directory and adding in a simple header file
 and then running cmake. This layer can be used just as any other Vulkan layer.
+
+翻译：
+创建一个自定义的Vulkan Layer只需要在layer_factory目录下面创建一个子目录，并且添加一个头文件，执行cmake命令，就可以生成。而且，这个Vulkan Layer可以像标准Vulkan Layer一样使用。
 
 The Vulkan Layer Factory framework produces 'Factory Layers' comprising one or more
 'interceptor' objects. Interceptor objects override functions to be called before (PreCallApiName)
