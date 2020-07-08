@@ -2,8 +2,8 @@
 
 This project provides various Vulkan tools(这个项目提供多个Vulkan工具)
 
-## CI Build Status
-| Platform | Build Status |
+## CI Build Status 持续集成状态
+| Platform 平台 | Build Status 编译状态| 
 |:--------:|:------------:|
 | Linux/Android | [![Build Status](https://travis-ci.org/LunarG/VulkanTools.svg?branch=master)](https://travis-ci.org/LunarG/VulkanTools) |
 | Windows | [![Build status](https://ci.appveyor.com/api/projects/status/2ncmy766ufb2hnh2/branch/master?svg=true)](https://ci.appveyor.com/project/karl-lunarg/vulkantools/branch/master) |
