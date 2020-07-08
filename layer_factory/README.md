@@ -41,35 +41,33 @@ an example of a very simple layer implementation.
 该项目包含两个示例，Demo和Starter。
 
 
-### Create a Factory Layer
+### Create a Factory Layer 创建Layer
 
 
-Step 1: Create a subdirectory in the layer\_factory directory using a name that will serve as the base
-for the final layer
+Step 1: 在目录layer_factory创建一个子文件夹，取名luopan
 
-    For example, a subdirectory named 'starter\_layer' will produce VkLayer\_starter\_layer.dll/libVkLayer\_starter\_layer.so and be loaded as VK_LAYER_LUNARG_starter_layer
+    生成的二进制文件：
+    VkLayer_luopan.dll----windows平台
+    VkLayer_luopan.so-----linux/Android平台
+    对应层的名字为：
+    VK_LAYER_LUNARG_luopan
 
-Step 2: Add your state tracker file(s) to the subdirectory.
+Step 2: 在luopan文件夹中，创建luopan.h头文件，也可以创建对应的luopan.cpp文件，或者更多其他的文件
 
-    This can be a single header file, or multiple header and source files.
 
-Step 3: Create or copy an 'interceptor\_objects.h' file into your new directory
+Step 3: 创建或者拷贝 interceptor_objects.h文件到luopan文件夹中
 
-    This should include the header file for each of the included interceptors:
+    在 interceptor_objects.h 文件中添加如下内容：
 
-    #include "whatever_you_called_your_layers_header_file.h"
+    #include "luopan.h"
 
-Step 4: Run CMake and build.
+Step 4: 执行cmake命令，编译.
 
-    CMake will discover all Factory Layer subdirectories in layer_factory each time it is run.
-    A *.json and *.def file (for Windows) will also be created with your layer binary.
-    These files end up in the existing layers binary directory, and will be picked up
-    by the usual VK_LAYERS_PATH environment variable.
+    编译生成so二进制文件和对应json文件，json文件配置了入口functions,一般是：
+    vkGetInstanceProcAddr
+    vkGetDeviceProcAddr
 
-    Note that adding or removing a layer_factory subdirectory requires re-running CMake in order to
-    properly recognize the additions/deletions.
-
-## Using Layers
+## Using Layers 使用Layers
 
 1. Build VK loader using normal steps (cmake and make)
 2. Place the layer library (dll or so) in the same directory as your VK test or application
