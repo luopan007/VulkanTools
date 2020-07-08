@@ -10,7 +10,7 @@ Copyright &copy; 2015-2020 LunarG, Inc.
 
 # Vulkan Layer Factory
 
-## Overview
+## Overview 总览
 
 The Vulkan Layer Factory is a framework based on the canonical Vulkan layer model that
 facilitates the implementation of Vulkan Layers. The layer factory hides the majority of the
@@ -32,11 +32,13 @@ The Vulkan Layer Factory framework produces 'Factory Layers' comprising one or m
 or after (PostCallApiName) each Vulkan entrypoint of interest. Each interceptor is independent
 of all others within a Factory Layer, and their call order is not guaranteed.
 
-### Layer Factory sample code
+### Layer Factory sample code 示例代码
 
 The base installation of the layer factory contains some sample layers, including
 the Demo layer and the Starter Layer. The Starter Layer in particular is meant to serve as
 an example of a very simple layer implementation.
+
+该项目包含两个示例，Demo和Starter。
 
 
 ### Create a Factory Layer
